@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrisisTrack</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <nav>
+        <h1>CrisisTrack</h1>
+        <div class="nav-links">
+         
+            <a href="index.html">Sign-up</a>
+            <a href="#caretaker">Caretaker Info</a>
+            <a href="#personal">Personal Health</a>
+            <a href="#resources">Resources</a>
+            <a href="main.html">Home</a>
+        </div>
+      </nav>
+    
+      <main>
+        <section class="pain-log">
+          <h2>Log Your Pain</h2>
+          <textarea placeholder="Describe your pain today..."></textarea>
+          <label for="pain-level">Pain Level (1 - Normal, 5 - Average, 10 - Excruciating)</label><br>
+          <input class="range" type="range" id="pain-level" min="1" max="10" />
+          <div class="scale-labels"><span>1</span><span>5</span><span>10</span></div>
+          <button onclick="submitPainLog()">Submit Pain Log</button>
+        </section>
+    
+        <section class="reminders">
+            <h2>Reminders</h2>
+            <ul>
+              <li class="reminder-item">
+                Hydration <button>Set</button>
+              </li>
+              <li class="reminder-item">
+                Medication <button>Set</button>
+              </li>
+              <li class="reminder-item">
+                Wellness Check-in <button>Set</button>
+              </li>
+            </ul>
+          </section>
+          
+    
+        <section class="panic">
+          <button id="panic-btn">PANIC</button>
+        </section>
+      </main>
+    
+      <section id="caretaker">
+        <h2>Caretaker Information</h2>
+        <input type="text" placeholder="Name (required)" id="Name" class="input-field"> <br>
+        <input type="tel" placeholder="Phone number(required)" id="phone" class="input-field"> <br>
+        <input type="text" placeholder="Relationship" id="relative" class="input-field"><br>
+        <button class="submit-button">Save</button>
+        <button class="submit-button">Delete</button>
+      </section>
+    
+      <section id="personal">
+        <h2>Personal Health Status</h2>
+        <fieldset>
+            <legend>What triggers your crisis</legend>
+        <textarea class="triggers" placeholder="What Triggers your crisis"></textarea>
+        </fieldset>
+          <fieldset>
+            <legend>Sickle Cell type</legend>
+            <label class="labels" for="SS">SS</label>
+            <input  type="radio" id="SS" name="sickle-cell" value="SS"/> <br>
+            <label class="labels" for="SC">SC</label>
+            <input  type="radio" id="SC" name="sickle-cell" value="sc"/> <br>
+          </fieldset>
+        <fieldset>
+            <legend>How often do you get crisis</legend>
+            <label class="labels" for="Often">Often (within 2-4 months)</label>
+            <input  type="radio" id="Often" name="frequency" value="Often"/> <br>
+            <label class="labels" for="Sometimes">Sometimes (within 5-12 months)</label>
+            <input  type="radio" id="Sometimes" name="frequency" value="Sometimes"/> <br>
+            <label class="labels" for="Rarely">Rarely (once a year)</label>
+            <input  type="radio" id="Rarely" name="frequency" value="Rarely"/> <br>
+        </fieldset>
+        <button class="submit-button">Save</button>
+        <button class="submit-button">Delete</button>
+    </section>
+    
+      <section id="resources">
+        <h2>Educational Resources</h2>
+        <ul>
+          <li><a href="#">Understanding Sickle Cell - Video</a></li>
+          <li><a href="#">Nutrition and Hydration for SCD - PDF</a></li>
+          <li><a href="#">Managing Pain - Medical Guide</a></li>
+        </ul>
+      </section>
+</body>
+<footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Kolade Adepoju. All rights reserved.</p>
+    </div>
+  </footer>
+</html>

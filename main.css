@@ -1,0 +1,174 @@
+body {
+    font-family: sans-serif;
+    background-color: #fff5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-image: url('images/backg.png');
+  }
+  
+  nav {
+    background: white;
+    padding: 0rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .nav-links a {
+    margin-left: 1rem;
+    color: #b91c1c;
+    text-decoration: none;
+  }
+  
+  main {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    padding: 2rem;
+  }
+  
+  .pain-log,
+  .reminders,
+  #caretaker,
+  #personal,
+  #resources {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 8px rgba(0,0,0,0.05);
+  }
+
+  #caretaker{
+    margin-bottom: 20px;
+  }
+
+  #personal{
+    margin-bottom: 20px;
+  }
+
+  #resources{ 
+    margin-bottom: 20px;
+  }
+  
+  .pain-log textarea {
+    width: 100%;
+    height: 100px;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .scale-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+  }
+
+  .range{
+    width: 610px;
+  }
+  
+  .pain-log button,
+  .reminders button,
+  #panic-btn {
+    background-color: #b91c1c;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .panic {
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+  
+  #panic-btn {
+    font-size: 1.25rem;
+    padding: 1rem 2rem;
+    animation: pulse 2s infinite;
+    box-shadow: 0 4px 20px rgba(255, 0, 0, 0.4);
+  }
+  
+  .reminders{
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    width: 350px;
+  }
+
+  .reminder-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+  }
+
+  .input-field{
+    background-color: #D9D9D9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 10px 20px;
+    width: 30%;
+    margin-top: 20px;
+  }
+  
+  .submit-button{
+    background-color: #A20303;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px; 
+    cursor: pointer; 
+    width: 15%;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+  .labels{
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  footer{
+    background: white;
+    padding: 0rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #b91c1c;
+    font: arial, sans-serif;
+    
+  }
+  html{
+    scroll-behavior: smooth;
+}
+.triggers{ width: 98%;
+  height: 100px;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
