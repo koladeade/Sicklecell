@@ -7,17 +7,21 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <nav>
-        <h1>CrisisTrack</h1>
-        <div class="nav-links">
-         
-            <a href="index.html">Sign-up</a>
-            <a href="#caretaker">Caretaker Info</a>
-            <a href="#personal">Personal Health</a>
-            <a href="#resources">Resources</a>
-            <a href="main.html">Home</a>
-        </div>
-      </nav>
+  <nav>
+    <ul class="sidebar">
+      <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#b91c1c"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+      <li><a href="../Signup/signup.html">Signup</a></li>
+      <li><a href="../Signup/login.html">Login</a></li>
+      <li><a href="main.html">Home</a></li>
+     </ul>
+ <ul>
+  <li class="logo">CrisisTrack</li>
+  <li class="hideOnMobile"><a href="../Signup/signup.html">Signup</a></li>
+  <li class="hideOnMobile"><a href="../Signup/login.html">Login</a></li>
+  <li class="hideOnMobile"><a href="main.html">Home</a></li>
+  <li class="menu-button" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#b91c1c"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a> </li>
+ </ul>
+  </nav>
     
       <main>
         <section class="pain-log">
@@ -93,10 +97,23 @@
           <li><a href="#">Managing Pain - Medical Guide</a></li>
         </ul>
       </section>
+
+      <footer class="footer">
+        <div class="footer-content">
+          <p>&copy; 2025 Kolade Adepoju. All rights reserved.</p>
+        </div>
+      </footer>
+
+
+      <script>
+        function showSidebar(){
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display = 'flex'
+  }
+  function hideSidebar(){
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display = 'none'
+  }
+  </script>
 </body>
-<footer class="footer">
-    <div class="footer-content">
-      <p>&copy; 2025 Kolade Adepoju. All rights reserved.</p>
-    </div>
-  </footer>
 </html>

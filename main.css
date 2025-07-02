@@ -5,25 +5,74 @@ body {
     margin: 0;
     padding: 0;
     background-image: url('images/backg.png');
+    min-height: 100vh;
+    background-size: cover;
   }
   
-  nav {
-    background: white;
-    padding: 0rem 2rem;
+  nav{
+    background-color: white;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+nav ul{
+    width: 100%;
+    list-style: none;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
-  
-  .nav-links a {
-    margin-left: 1rem;
-    color: #b91c1c;
+    padding: auto;
+    margin: auto;
+}
+nav li{
+    height: 50px;
+}
+nav a{
+    height: 100%;
+    padding: 0 30px;
     text-decoration: none;
-  }
+    display: flex;
+    align-items: center;
+    color: #b91c1c;
+}
+nav a:hover{
+    background-color: #f3f4f6;
+    color: #b91c1c;
+}
+nav li:first-child{
+    margin-right: auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #b91c1c;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.sidebar li{
+    width: 100%;
+}
+.sidebar a{
+    width: 100%;
+}
+.menu-button{
+    display: none;
+}
+
+  
+  
   
   main {
     display: grid;
@@ -72,7 +121,9 @@ body {
   }
 
   .range{
-    width: 610px;
+      width: 100%;
+      max-width: 100%;
+      height: 8px;    
   }
   
   .pain-log button,
@@ -122,14 +173,16 @@ body {
   }
   
   .submit-button{
-    background-color: #A20303;
-    border-radius: 5px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 1000px;
+    padding: .85em 4em;
+    background-color: #b91c1c;
     color: white;
-    padding: 10px 20px; 
-    cursor: pointer; 
-    width: 15%;
-    font-size: 18px;
-    margin-top: 20px;
+    font: inherit;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
   }
 
   @keyframes pulse {
@@ -171,4 +224,19 @@ body {
   margin-bottom: 1rem;
   border: 1px solid #ccc;
   border-radius: 8px;
+}
+
+@media(max-width: 800px){
+  .hideOnMobile{
+      display: none;
+  }
+  .menu-button{
+    display: block;  
+  }
+}
+@media(max-width: 400px){
+  .sidebar{
+      width: 100%;
+  }
+
 }
