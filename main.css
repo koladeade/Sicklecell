@@ -14,7 +14,7 @@ body {
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
 }
 nav ul{
-    width: 100%;
+    width: auto;
     list-style: none;
     display: flex;
     justify-content: flex-end;
@@ -71,8 +71,7 @@ nav li:first-child{
     display: none;
 }
 
-  
-  
+
   
   main {
     display: grid;
@@ -175,15 +174,108 @@ nav li:first-child{
   .submit-button{
     margin-top: 10px;
     border: none;
-    border-radius: 1000px;
-    padding: .85em 4em;
+    border-radius: 30px;
+    padding: 10px 30px;
     background-color: #b91c1c;
     color: white;
-    font: inherit;
-    font-weight: 600;
-    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-right: 1rem;
     cursor: pointer;
+    transition: background-color 0.2s ease;
   }
+
+  .submit-button:hover {
+    background-color: #991b1b;
+  }
+
+  #personal {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+  }
+  
+  #personal fieldset {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+  }
+  
+  #personal legend {
+    font-weight: bold;
+    color: #333;
+    padding: 0 0.5rem;
+  }
+  
+  #personal textarea.triggers {
+    width: 100%;
+    height: 100px;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    resize: vertical;
+    font-family: inherit;
+    font-size: 1rem;
+  }
+  
+  #personal label.labels {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  #personal input[type="radio"] {
+    margin-left: 10px;
+    margin-right: 20px;
+  }
+  
+  #personal .submit-button {
+    background-color: #b91c1c;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    padding: 10px 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-right: 1rem;
+    transition: background-color 0.2s ease;
+  }
+  
+  #personal .submit-button:hover {
+    background-color: #991b1b;
+  }
+  
+.resource-link{
+  text-decoration: none;
+}
+.resource-link a{
+  text-decoration: none;
+  color: #b91c1c;
+}  
+  
+.resource-link a:hover{
+  color: #8B0000;
+  text-decoration: underline;
+}
+.resource-link a:visited{
+  color: purple;
+}
+
+.resource-link a:active{
+  color: white;
+}
+.frame{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  border-radius: 20px;
+}
 
   @keyframes pulse {
     0% { transform: scale(1); }
