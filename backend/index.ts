@@ -1,4 +1,5 @@
 import express from 'express';
+import cors from 'cors';
 import authRoute from './routes/auth.routes.ts';
 import dotenv from 'dotenv';
 
@@ -9,6 +10,12 @@ const PORT = process.env.PORT || 5000;
 
 
 connectdb();
+
+
+app.use(cors({
+  origin: 'http://127.0.0.1:5500', // replace with your frontend's URL
+  credentials: true
+}));
 
 
 app.use(express.json());
