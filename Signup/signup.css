@@ -19,6 +19,7 @@ body{
 nav{
     background-color: white;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    border-bottom: 3rem;
 }
 nav ul{
     width: 100%;
@@ -179,7 +180,7 @@ form div.incorrect input{
     border-color: #f06272;
 }
 #error-message{
-    color:#f06272
+    color:#f06272;
 }
 @media(max-width: 800px){
     .hideOnMobile{
