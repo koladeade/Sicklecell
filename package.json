@@ -12,7 +12,7 @@
   },
   "name": "sicklecell-master",
   "version": "1.0.0",
-  "main": "index.ts",
+  "main": "index.js",
   "keywords": [
     "sicklecell",
     "healthcare",
@@ -21,10 +21,11 @@
   ],
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon backend/index.ts",
-    "start": "node backend/index.ts"
-  },
+  "build": "tsc",
+  "start": "node dist/index.js",
+  "server": "nodemon backend/index.js"
+}
+  ,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/koladeade/Sicklecell.git"
@@ -35,5 +36,8 @@
     "url": "https://github.com/koladeade/Sicklecell/issues"
   },
   "homepage": "https://github.com/koladeade/Sicklecell#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "ts-node": "^10.9.2"
+  }
 }

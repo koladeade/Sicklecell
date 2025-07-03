@@ -1,9 +1,9 @@
 import express from 'express';
 import cors from 'cors';
-import authRoute from './routes/auth.routes.ts';
+import authRoute from './routes/auth.routes.js';
 import dotenv from 'dotenv';
 
-import connectdb from './db/db.ts';
+import connectdb from './db/db.js';
 
 const app = express();
 const PORT = process.env.PORT || 5000;
