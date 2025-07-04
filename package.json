@@ -22,8 +22,9 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon backend/index.ts",
+    "server": "nodemon --watch backend --exec \"ts-node --loader ts-node/esm backend/index.ts\"",
     "start": "node backend/index.ts"
+    
   },
   "repository": {
     "type": "git",
@@ -37,3 +38,6 @@
   "homepage": "https://github.com/koladeade/Sicklecell#readme",
   "description": ""
 }
+
+  
+
