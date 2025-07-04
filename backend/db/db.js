@@ -3,9 +3,9 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const connectdb = async (): Promise<void> => {
+const connectdb = async () => {
     try {
-        const conn = await mongoose.connect(process.env.MONGO_URI as string, {
+        const conn = await mongoose.connect(process.env.MONGO_URI , {
             dbName: "SickleCellDB",
         });
         console.log("Connected to MongoDB", conn.connection.host);
