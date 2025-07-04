@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrisisTrack</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <nav>
+    <ul class="sidebar">
+      <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#b91c1c"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+      <li><a href="../Signup/signup.html">Signup</a></li>
+      <li><a href="../Signup/login.html">Login</a></li>
+      <li><a href="main.html">Home</a></li>
+     </ul>
+ <ul>
+  <li class="logo">CrisisTrack</li>
+  <li class="hideOnMobile"><a href="../Signup/signup.html">Signup</a></li>
+  <li class="hideOnMobile"><a href="../Signup/login.html">Login</a></li>
+  <li class="hideOnMobile"><a href="main.html">Home</a></li>
+  <li class="menu-button" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#b91c1c"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a> </li>
+ </ul>
+  </nav>
+    
+      <main>
+        <section class="pain-log">
+          <h2>Log Your Pain</h2>
+          <textarea placeholder="Describe your pain today..."></textarea>
+          <label for="pain-level">Pain Level (1 - Normal, 5 - Average, 10 - Excruciating)</label><br>
+          <input class="range" type="range" id="pain-level" min="1" max="10" />
+          <div class="scale-labels"><span>1</span><span>5</span><span>10</span></div>
+          <button onclick="submitPainLog()">Submit Pain Log</button>
+        </section>
+    
+        <section class="reminders">
+            <h2>Reminders</h2>
+            <ul>
+              <li class="reminder-item">
+                Hydration <button>Set</button>
+              </li>
+              <li class="reminder-item">
+                Medication <button>Set</button>
+              </li>
+              <li class="reminder-item">
+                Wellness Check-in <button>Set</button>
+              </li>
+            </ul>
+          </section>
+          
+    
+        <section class="panic">
+          <button id="panic-btn">PANIC</button>
+        </section>
+      </main>
+    
+      <section id="caretaker">
+        <h2>Caretaker Information</h2>
+        <input type="text" placeholder="Name (required)" id="Name" class="input-field"> <br>
+        <input type="tel" placeholder="Phone number(required)" id="phone" class="input-field"> <br>
+        <input type="text" placeholder="Relationship" id="relative" class="input-field"><br>
+        <button class="submit-button">Save</button>
+        <button class="submit-button">Delete</button>
+      </section>
+    
+      <section id="personal">
+        <h2>Personal Health Status</h2>
+        <fieldset>
+            <legend>What triggers your crisis</legend>
+        <textarea class="triggers" placeholder="What Triggers your crisis"></textarea>
+        </fieldset>
+          <fieldset>
+            <legend>Sickle Cell type</legend>
+            <label class="labels" for="SS">SS</label>
+            <input  type="radio" id="SS" name="sickle-cell" value="SS"/> <br>
+            <label class="labels" for="SC">SC</label>
+            <input  type="radio" id="SC" name="sickle-cell" value="sc"/> <br>
+          </fieldset>
+        <fieldset>
+            <legend>How often do you get crisis</legend>
+            <label class="labels" for="Often">Often (within 2-4 months)</label>
+            <input  type="radio" id="Often" name="frequency" value="Often"/> <br>
+            <label class="labels" for="Sometimes">Sometimes (within 5-12 months)</label>
+            <input  type="radio" id="Sometimes" name="frequency" value="Sometimes"/> <br>
+            <label class="labels" for="Rarely">Rarely (once a year)</label>
+            <input  type="radio" id="Rarely" name="frequency" value="Rarely"/> <br>
+        </fieldset>
+        <button class="submit-button">Save</button>
+        <button class="submit-button">Delete</button>
+    </section>
+    
+      <section id="resources">
+        <h2>Educational Resources</h2>
+        <ul class="resource-link">
+          <li><a href="https://www.nhlbi.nih.gov/health/sickle-cell-disease" target="_blank" >Understanding Sickle Cell</a></li>
+          <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9175917/" target="_blank">Nutrition and Hydration for SCD</a></li>
+          <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC1279994/" target="_blank">Managing Pain - Medical Guide</a></li>
+        </ul>
+
+        <div class="frame">
+        <iframe width="300" height="200" src="https://www.youtube.com/embed/dJBmtPR_flg?si=Km92P7ogtbaeoCM4" title="What is  sickle-cell-disease" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="300" height="200" src="https://www.youtube.com/embed/qK5H9fPkltc?si=SexhpXeaGVA5SB4l" title="What you need to know about sickle-cell-disease" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="300" height="200" src="https://www.youtube.com/embed/fIIJmg_1hv0?si=C_ZatNS-fErvsOf5" title="Overview of sickle-cell-disease" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </section>
+
+      <footer class="footer">
+        <div class="footer-content">
+          <p>&copy; 2025 Kolade Adepoju. All rights reserved.</p>
+        </div>
+      </footer>
+
+
+      <script>
+        function showSidebar(){
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display = 'flex'
+  }
+  function hideSidebar(){
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display = 'none'
+  }
+  </script>
+</body>
+</html>
