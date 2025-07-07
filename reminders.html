@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reminder System</title>
+  <link rel="stylesheet" href="reminder.css">
+</head>
+<body>
+  <section class="reminders">
+    <h2>Reminders</h2>
+
+    <div class="reminder-form">
+      <label for="reminder-time">Date and Time</label>
+      <input type="datetime-local" id="reminder-time" required>
+
+      <label for="reminder-msg">Custom Message</label>
+      <input type="text" id="reminder-msg" placeholder="E.g., Take meds" required>
+
+      <label><input type="checkbox" id="repeat-daily"> Repeat Daily</label>
+
+      <button onclick="setReminder()">Set Reminder</button>
+      <button onclick="clearReminders()">Clear All</button>
+      <button onclick="stopReminderSound()">Stop Sound</button>
+    </div>
+
+    <div id="sound-status" class="sound-status">
+      🔊 Reminder Sound Playing...
+    </div>
+
+    <div id="reminder-list"></div>
+
+    <audio id="reminder-sound" src="/audio/audioreminder.mp3" preload="auto"></audio>
+  </section>
+
+  <script src="reminder.js"></script>
+</body>
+</html>
